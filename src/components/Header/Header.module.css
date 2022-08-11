@@ -1,0 +1,19 @@
+.block {
+    background-color: transparent;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: 215px;
+    width: 100%;
+    max-width: 1200px;
+    /* left: calc(50% - 600px) */
+    right: auto; 
+    z-index: 2;
+
+}
+
+.logo {
+    height: 80px;
+}
