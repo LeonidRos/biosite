@@ -4,7 +4,7 @@ import homeImg3 from '../img/swp_3.png';
 
 function Promo() {
 	return (
-    <div className="promo">
+    <section className="promo">
 
         <div className="promo__content">
 
@@ -31,7 +31,7 @@ function Promo() {
 
         </div>
 
-    </div>
+    </section>
 	);
 }
 

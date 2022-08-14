@@ -4,7 +4,7 @@ import {Carousel} from './Carousel/Carousel';
 
 function OurWork() {
 	return (
-    <div className="our">
+    <section className="our">
          <h2 className="prime_h2">Our work</h2>
 
          <Carousel>
@@ -30,7 +30,7 @@ function OurWork() {
             </div>
 
          </Carousel>
-    </div>
+    </section>
 	);
 }
 

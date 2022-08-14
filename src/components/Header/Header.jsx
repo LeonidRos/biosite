@@ -1,8 +1,6 @@
 import Nav from '../Nav';
-
 import style from './Header.module.css';
-
-const PUBLIC_URL = process.env.PUBLIC_URL;
+import logo from '../../img/logo.png';
 
 
 function Header() {
@@ -10,7 +8,7 @@ function Header() {
 	<header className={style.block}>
 		<div className={style.logo}>
             <a href="/">
-                <img src={PUBLIC_URL + './logo.png'} alt="#" />
+                <img src={logo} alt="#" />
             </a>
         </div>
 		<Nav />

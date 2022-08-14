@@ -4,7 +4,7 @@ import homeImg3 from '../img/wood_ash.png';
 
 function WorkWith() {
 	return (
-    <div className="with">
+    <section className="with">
 
        <h2 className="prime_h2">The wood we work with</h2>
 
@@ -45,7 +45,7 @@ function WorkWith() {
 
             </div>
        </div>
-    </div>
+    </section>
 	);
 }
 

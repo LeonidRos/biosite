@@ -13,9 +13,9 @@ function App() {
 			<Router>
 				<Header />
 				<Main />
-				<Footer />
 			</Router>
 		</div>
+			<Footer />
 	</div>
 	);
 }
