@@ -2,6 +2,8 @@
 import Promo from '../Promo';
 import With from '../WorkWith';
 import OurWork from '../OurWork';
+import AboutComp from '../AboutComp';
+import Advantages from '../Advantages';
 
 
 function Home() {
@@ -13,7 +15,9 @@ function Home() {
 		<div className="box"></div>
 		<With />
 		<OurWork />
+		<Advantages />
 		</div>
+		<AboutComp />
 	</div>
 
 	);
