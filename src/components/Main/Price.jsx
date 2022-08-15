@@ -1,13 +1,12 @@
-
-import { MainContext } from "./Main";
+import AnyQuest from '../AnyQuest';
 
 function Price() {
 	
 
 	return (
 	<div className="price">
-		{}
-		Price
+		<div className="box-wr"></div>
+		<AnyQuest />
 	</div>
 	);
 }

@@ -64,6 +64,11 @@ font-family: 'KyivSans';
     height: 500px;
 }
 
+.box-wr{
+
+    height: 70px;
+}
+
 .wrapper{
 
     max-width: 1200px;

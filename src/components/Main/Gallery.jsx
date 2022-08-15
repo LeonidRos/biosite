@@ -1,13 +1,17 @@
-import { useContext } from "react";
-import { MainContext } from "./Main";
+
+import With from '../WorkWith';
+import OurWork from '../OurWork';
+import AnyQuest from '../AnyQuest';
 
 function Gallery() {
-	const  {library} = useContext(MainContext);
 
 	return (
 	<div className="gallery">
-		{library.map(item => <div>{item.word}</div>)}
-		gallery
+		<div className="box-wr"></div>
+		<OurWork />
+		<With />
+		<AnyQuest />
+		
 	</div>
 	);
 }

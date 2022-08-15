@@ -1,15 +1,18 @@
-import { useContext, useEffect, useRef } from "react";
-import { MainContext } from "./Main";
+import OurWork from '../OurWork';
+import AboutComp from '../AboutComp';
+import AnyQuest from '../AnyQuest';
+
 
 function About() {
 	
 	return (
-	<div className="about">
-		{}
-		About us
-	</div>
+		<div className="aboutus">
+			<div className="box-wr"></div>
+			<AboutComp />
+			<OurWork />
+			<AnyQuest />
+		</div>
 	);
 }
-
 
 export default About;
