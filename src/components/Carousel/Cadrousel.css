@@ -12,12 +12,30 @@
     border-radius: 50px;
 }
 
+.carousel__window_v{
+
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
 .carousel__all{
 
     width: 100%;
     display: flex;
     user-select: none;
     transition: 1s;
+}
+
+.carousel__all_v{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    transition: 1s;
+
 }
 
 .item{

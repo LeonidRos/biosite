@@ -5,6 +5,7 @@ import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 
 import './style.css';
+import './media.css';
 
 function App() {
 	return (

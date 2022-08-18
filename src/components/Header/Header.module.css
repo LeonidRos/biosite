@@ -10,10 +10,22 @@
     max-width: 1200px;
     /* left: calc(50% - 600px) */
     right: auto; 
-    z-index: 2;
+    z-index: 99;
 
 }
 
 .logo {
     height: 80px;
+}
+
+@media screen and (max-width: 1370px){
+
+    .block{
+        justify-content: space-between;
+    }
+    .logo {
+        height: 80px;
+        margin-left: 50px;
+    }
+    
 }

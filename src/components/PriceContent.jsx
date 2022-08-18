@@ -1,4 +1,4 @@
-import {Carousel} from './Carousel/Carousel';
+import {CarouselVertical} from './Carousel/CarouselVertical';
 import priceImg1 from '../img/Group1.png'
 import priceImg2 from '../img/Group2.png'
 import priceImg3 from '../img/Group3.png'
@@ -10,7 +10,7 @@ function PriceContent(){
         <div className="our">
             <h2 className="prime_h2">Price List</h2>
 
-            <Carousel>
+            <CarouselVertical>
 
                 <div className="item">
                     <img src={priceImg1} alt="#" />
@@ -28,7 +28,15 @@ function PriceContent(){
                     <img src={priceImg4} alt="#" />
                 </div>
 
-            </Carousel>
+
+                
+                <div className="item"></div>
+                <div className="item"></div>
+                <div className="item"></div>
+                <div className="item"></div>
+                <div className="item"></div>
+
+            </CarouselVertical>
         </div>
     );
 }
