@@ -1,0 +1,126 @@
+@media screen and (min-width: 1441px) and (max-width: 1650px){
+   
+    .promo{
+        left: 100px;
+    }
+
+}
+
+
+@media screen and (max-width: 1440px){
+        
+    .app{
+        overflow: hidden;
+    }
+    .wrapper{
+
+        max-width: 1200px;
+    }
+
+    .home{
+
+        width: 1200px; 
+        margin: 0 auto;
+    }
+
+    .home__wrapp{
+
+        margin: 0 auto;
+        position: static;
+    }
+
+    .promo{
+
+        width: 110%;
+        border-radius: 45px 0 0 45px;   
+        left: auto;
+        right: 0px;
+        margin-left: 120px;
+
+    }
+
+    .about{
+
+        right: 200px;
+        width: 110%;
+        border-radius: 0 45px 45px 0;
+    }
+
+    .contact{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1370px){
+    
+
+    .nav{
+
+        display: none;
+    }
+
+    .nav__burger_open{
+
+        display: block;
+    }
+
+    .wrapper{
+
+        /* max-width: none; */
+    }
+
+    .promo{
+
+      margin-left: 80px;
+    }
+
+    .with__woods{
+
+        justify-content: space-evenly;
+    }
+
+    .our{
+        width: 80%;
+    }
+
+
+}
+
+@media screen and (max-width: 1200px){
+
+    .home__wrapp, .gallery, .price, .aboutus, .contact{
+
+        max-width: 1080px;
+    }
+
+    .promo{
+        
+      margin-left: -30px;
+    }
+
+    .carousel__window{
+
+        height: 575px;
+    }
+
+    .about{
+
+        width: 100%;
+        right: 0;
+        padding: 50px;
+        gap: 20px;
+    }
+
+    .about__left{
+
+        margin: 0;
+    }
+
+    .about__right{
+        width: auto;
+    }
+
+    .contact{
+        gap: 30px;
+    }
+}
