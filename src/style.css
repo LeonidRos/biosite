@@ -75,7 +75,7 @@ font-family: 'KyivSans';
     margin: 0 auto;
     color: #F5F5F5;
 }
-
+/*NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV----NAV*/
 .nav ul {
 
     display: flex;
@@ -230,7 +230,7 @@ font-family: 'KyivSans';
     margin-left: 100px;
     position: relative;
 }
-
+/*PROMO----PROMO----PROMO----PROMO----PROMO----PROMO----PROMO----PROMO----PROMO----PROMO----PROMO----PROMO----PROMO*/
 .promo{
 
     background-color: #1E0C06;
@@ -301,10 +301,11 @@ font-family: 'KyivSans';
     width: 205px;
     height: 205px;
 }
-
+/*WITH----WITH----WITH----WITH----WITH----WITH----WITH----WITH----WITH----WITH----WITH----WITH----WITH----WITH*/
 .with{
 
     margin: 0 auto;
+    position: relative;
 }
 
 .with>.prime_h2{
@@ -377,6 +378,27 @@ font-family: 'KyivSans';
     top: 10px;
 }
 
+.scroll__bar{
+
+    display: none;
+    height: 12px;
+    width: 768px;
+    background-color: #32353C;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+}
+
+.scroll__swiper{
+
+    width: 50px;
+    height: 6px;
+    background-color: #B0B4BD;
+    border-radius: 6px;
+    position: absolute;
+    top: 3px;
+}
+/*OUR----CAROUSEL----OUR----CAROUSEL----OUR----CAROUSEL----OUR----CAROUSEL----OUR----CAROUSEL----OUR----CAROUSEL----OUR----CAROUSEL*/
 .our{
 
     margin: 200px auto;
@@ -386,7 +408,7 @@ font-family: 'KyivSans';
 
     margin-top: 120px;
 }
-
+/*ADVANTAGES----ADVANTAGES----ADVANTAGES----ADVANTAGES----ADVANTAGES----ADVANTAGES----ADVANTAGES----ADVANTAGES----ADVANTAGES----ADVANTAGES*/
 .advantages__content{
 
     display: flex;
@@ -416,7 +438,7 @@ font-family: 'KyivSans';
     width: 320px;
     margin: 0 auto;
 }
-
+/*ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT*/
 .about{
     
     margin: 150px auto;
@@ -435,7 +457,7 @@ font-family: 'KyivSans';
 
 .about__left{
 
-    margin-left: 250px;
+    margin-left: 130px;
     width: 50%;
 }
 
@@ -470,7 +492,7 @@ font-family: 'KyivSans';
 
     padding-right: 30px;
 }
-
+/*ANYQUEST----ANYQUEST----ANYQUEST----ANYQUEST----ANYQUEST----ANYQUEST----ANYQUEST----ANYQUEST----ANYQUEST----ANYQUEST*/
 .any{
 
     margin-bottom: -100px;
@@ -527,6 +549,7 @@ font-family: 'KyivSans';
     width: 50%;
     text-align: right;
 }
+/*CONTACTS----CONTACTS----CONTACTS----CONTACTS----CONTACTS----CONTACTS----CONTACTS----CONTACTS----CONTACTS----CONTACTS----CONTACTS*/
 .contact{
 
     padding: 200px 0 0 0;
@@ -557,7 +580,7 @@ font-family: 'KyivSans';
 .contact__map>iframe{
     border-radius: 40px;
 }
-
+/*FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER*/
 .footer{
 
     align-self: flex-end;
@@ -628,5 +651,3 @@ font-family: 'KyivSans';
     left: -55px;
     top: 20px;
 }
-
-

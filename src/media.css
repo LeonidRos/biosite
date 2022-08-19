@@ -3,32 +3,28 @@
     .promo{
         left: 100px;
     }
-
 }
-
 
 @media screen and (max-width: 1440px){
         
     .app{
+
         overflow: hidden;
     }
     .wrapper{
 
         max-width: 1200px;
     }
-
     .home{
 
         width: 1200px; 
         margin: 0 auto;
     }
-
     .home__wrapp{
 
         margin: 0 auto;
         position: static;
     }
-
     .promo{
 
         width: 110%;
@@ -38,14 +34,12 @@
         margin-left: 120px;
 
     }
-
     .about{
 
         right: 200px;
         width: 110%;
         border-radius: 0 45px 45px 0;
     }
-
     .contact{
         justify-content: center;
     }
@@ -53,37 +47,50 @@
 
 @media screen and (max-width: 1370px){
     
-
     .nav{
 
         display: none;
     }
-
     .nav__burger_open{
 
         display: block;
     }
-
-    .wrapper{
-
-        /* max-width: none; */
-    }
-
     .promo{
 
-      margin-left: 80px;
+      margin-left: 260px;
+      flex-direction: column;
+      height: 720px;
     }
 
+    .promo__content{
+
+        border: 0;
+        border-bottom: 1px solid #F5F5F5;
+        margin: 0 0 190px 50px;
+    }
+    .promo__imgs{
+
+        position: absolute;
+        right: 220px;
+        top: 270px  ;
+        height: 700px;
+        gap: 150px;
+    }
+    .box{
+
+        height: 750px;
+    }
     .with__woods{
 
+        width: 1090px;
         justify-content: space-evenly;
     }
-
     .our{
-        width: 80%;
+        width: 90%;
     }
-
-
+    .about__left {
+        margin-left: 220px;
+    }
 }
 
 @media screen and (max-width: 1200px){
@@ -92,17 +99,17 @@
 
         max-width: 1080px;
     }
-
     .promo{
         
-      margin-left: -30px;
+      margin-left: 220px;
     }
-
     .carousel__window{
 
         height: 575px;
     }
-
+    .with__woods{
+        width: 1090px;
+    }
     .about{
 
         width: 100%;
@@ -110,17 +117,215 @@
         padding: 50px;
         gap: 20px;
     }
-
     .about__left{
 
         margin: 0;
     }
-
     .about__right{
         width: auto;
     }
-
     .contact{
         gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1152px){
+
+    .home{
+
+        width: 1080px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .home{
+        width: auto;
+    }
+    .prime_h2{
+
+        margin-left: 5%;
+        font-size: 70px;
+    }
+    .home__wrapp, .gallery, .price, .aboutus, .contact{
+
+        max-width: auto;
+        width: auto;
+        min-width: auto;
+    }
+    .promo{
+        
+        margin-left: 165px;
+    }
+    .promo__content {
+
+        width: 40%;
+    }
+    .promo__imgs {
+
+        top: 300px;
+    }
+    .with{
+
+        margin: 80px auto;
+    }
+    .with__woods{
+
+        width: 1090px;
+    }
+    .our{
+
+        width: 80%;
+    }
+    .carousel__window{
+
+        height: 475px;
+    }
+    .advantages__content{
+
+        flex-direction: column-reverse;
+        width: 80%;
+    }
+    .advantages__content_text{
+
+        gap: 20px;
+    }
+    .advantages__content_video iframe{
+
+        width: 1000px;
+        height: 565px;
+        margin-left: -88px;
+    }
+    .about{
+
+        flex-direction: column;
+        right: 200px;
+        width: 800px;
+        height: 1300px;
+    }
+    .about__left{
+
+        width: auto;
+        margin-left: 200px;
+        margin: 80px 0 0 200px;
+    }
+    .about__left>.prime_h2{
+
+        margin-left: 0%;
+    }
+    .about__right{
+
+        gap: 380px;
+    }
+    .about__right>img:nth-child(1){
+
+        margin-right: 250px;
+    }
+    .about__right>img:nth-child(2){
+
+        left: 300px;
+        top: 600px;
+    }
+    .about__right>img:nth-child(3){
+        
+        margin-right: 300px;
+    }
+    .any>.prime_h2{
+
+        text-align: left;
+        margin-left: 5%;
+    }
+    .any__wrapper{
+
+        gap: 30px;
+
+    }
+    .any__form{
+
+        width: 40%;
+        margin-left: 20px;
+    }
+    .contact{
+
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact__map iframe{
+
+        width: 1000px;
+    }
+    .footer__logo{
+
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .app{
+
+        font-size: 25px;
+    }
+    .home{
+        width: auto;
+    }
+    .prime_h2{
+
+        font-size: 60px;
+    }
+    .promo__content{
+
+        margin: 50px 50px 80px 50px;
+    }
+    .promo__imgs{
+
+        right: 300px;
+        top: 385px;
+    }
+    .with__woods{
+
+        width: 1080px;
+    }
+    .scroll__bar{
+
+        display: block;
+    }
+    .our{
+        width: 75%;
+    }
+    .carousel__window{
+
+        height: 395px;
+    }
+    .advantages__content{
+
+        gap: 40px;
+        margin: 60px auto;
+    }
+    .advantages__content_video iframe{
+
+        width: 750px;
+        height: 420px;
+        margin-left: -68px;
+    }
+    .any__wrapper{
+
+        gap: 0;
+    }
+    .any__form{
+
+        width: 60%;
+    }
+    .any__description{
+
+        width: 35%;
+    }
+    .about__right>img:nth-child(1){
+
+        margin-right: 100px;
+    }
+    .contact__map iframe{
+
+        width: 750px;
     }
 }
