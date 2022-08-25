@@ -7,6 +7,7 @@ function AboutComp() {
 	
 	return (
 	<section className="about">
+		
 		<div className="about__left">
 			<h2 className="prime_h2">About us</h2>
 			<p className="about__description">

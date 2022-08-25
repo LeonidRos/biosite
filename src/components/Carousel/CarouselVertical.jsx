@@ -47,8 +47,8 @@ export const CarouselVertical = ({children}) => {
                 </div>
             </div>
 
-            <button className="carousel__btn" onClick={right}></button>
-            <button className="carousel__btn carousel__btn-left" onClick={left}></button>
+            <button className="carousel__btn_v" onClick={right}></button>
+            <button className="carousel__btn_v carousel__btn-left_v" onClick={left}></button>
 
             <div className="carousel__circles">{circles()}</div>
         </div>

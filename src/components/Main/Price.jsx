@@ -6,9 +6,10 @@ function Price() {
 
 	return (
 	<div className="price">
-		<div className="box-wr"></div>
+
 		<PriceList />
 		<AnyQuest />
+
 	</div>
 	);
 }

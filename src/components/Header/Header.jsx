@@ -12,6 +12,7 @@ function Header() {
 	const burgerOpen = useRef(null);
 
 	function routeReload(){
+
 		setReload(reload + 1);
 	}
 
@@ -25,11 +26,13 @@ function Header() {
 	});
 
 	function show(e){
+
 		burger.current.className='nav__burger-active';
 		burgerOpen.current.className='hide';
 	}
 
 	function close(){
+
 		burger.current.className='hide';
 		burgerOpen.current.className='nav__burger_open';
 	}
@@ -37,23 +40,31 @@ function Header() {
 	window.addEventListener("popstate", routeReload,false);
 
 	return (
+
 	<header className={css.block}>
-		<div className={css.logo} onClick={routeReload}>
-            
-                
-				<Link to="/"><img src={logo} alt="#" /></Link>
-        </div>
-		<nav className="nav">
-			<ul>
-				<li onClick={routeReload}><Link to="/gallery">Gallery</Link></li>
-				<li onClick={routeReload}><Link to="/price">Price List</Link></li>
-				<li onClick={routeReload}><Link to="/about">About us</Link></li>
-				<li onClick={routeReload}><Link to="/contact">Contact</Link></li>
-			</ul>
-		</nav>
-		<button className='nav__burger_open' ref={burgerOpen} onClick={show}></button>
+		<div className={css.wrapper}>
+			<div className={css.logo} onClick={routeReload}>
+
+					<Link to="/"><img src={logo} alt="#" /></Link>
+			</div>
+
+			<nav className="nav">
+				<ul>
+					<li onClick={routeReload}><Link to="/gallery">Gallery</Link></li>
+					<li onClick={routeReload}><Link to="/price">Price List</Link></li>
+					<li onClick={routeReload}><Link to="/about">About us</Link></li>
+					<li onClick={routeReload}><Link to="/contact">Contact</Link></li>
+				</ul>
+			</nav>
+
+			<button className='nav__burger_open' ref={burgerOpen} onClick={show}></button>
+			
+		</div>
+
 		<div className="hide" ref={burger}>
+
 			<button className='nav__burger_close' onClick={close}></button>
+
 			<nav className="nav__list">
 				<ul>
 					<li onClick={routeReload}><Link to="/">Home</Link></li>
@@ -63,6 +74,7 @@ function Header() {
 					<li onClick={routeReload}><Link to="/contact">Contact</Link></li>
 				</ul>
 			</nav>
+
 		</div>
 	</header>
 	);

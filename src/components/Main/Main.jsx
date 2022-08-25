@@ -9,7 +9,6 @@ import Price from './Price';
 
 export const MainContext = createContext();
 
-
 function Main() {
 	const [library, setLibrary] = useState([]);
 

@@ -9,15 +9,13 @@ import './media.css';
 
 function App() {
 	return (
-	<div className="app">
-		<div className='wrapper'>
+		<div className="app">
 			<Router>
 				<Header />
 				<Main />
 			</Router>
-		</div>
 			<Footer />
-	</div>
+		</div>
 	);
 }
 

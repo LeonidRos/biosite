@@ -6,14 +6,13 @@ import AnyQuest from '../AnyQuest';
 function About() {
 	
 	return (
-		<div className="about_bl">
-			<div className="box-wr"></div>
+
+		<div className="about_us">
+
 			<AboutComp />
-			
-			<div className="aboutus">
-				<OurWork />
-				<AnyQuest />
-			</div>
+			<OurWork />
+			<AnyQuest />
+
 		</div>
 	);
 }

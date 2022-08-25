@@ -1,52 +1,122 @@
-@media screen and (min-width: 1441px) and (max-width: 1650px){
-   
-    .promo{
-        left: 100px;
-    }
-}
-
 @media screen and (max-width: 1440px){
         
     .app{
 
         overflow: hidden;
     }
-    .wrapper{
-
-        max-width: 1200px;
-    }
-    .home{
-
-        width: 1200px; 
-        margin: 0 auto;
-    }
-    .home__wrapp{
-
-        margin: 0 auto;
-        position: static;
-    }
     .promo{
 
-        width: 110%;
-        border-radius: 45px 0 0 45px;   
-        left: auto;
-        right: 0px;
-        margin-left: 120px;
-
+        border-radius: 45px 0 0 45px;
+        max-width: 85%;
     }
     .about{
 
-        right: 200px;
-        width: 110%;
         border-radius: 0 45px 45px 0;
-    }
-    .contact{
-        justify-content: center;
+        max-width: 90%;
+        padding-left: 8%;
     }
 }
 
 @media screen and (max-width: 1370px){
     
+    .prime_h2{
+
+        font-size: 80px;
+    }
+    .carousel__window{
+
+        height: 740px;
+    }
+    .about{
+
+        padding-left: 6%;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    
+
+    .prime_h2{
+
+        font-size: 75px;
+    }
+    .promo__content{
+
+        width: 50%;
+        padding-right: 40px;
+    }
+    .promo__images{
+
+        width: 50%;
+        padding-left: 30px;
+    }
+    .carousel__window{
+
+        height: 695px;
+    }
+    .about{
+
+        padding-left: 5%;
+    }
+    .footer__geo{
+
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+    .promo__content{
+
+        padding-right: 25px;
+    }
+    .promo img{
+
+        width: 95%;
+        height: auto;
+    }
+    .promo__content>.prime_h2{
+
+        font-size: 65px;
+    }
+    .carousel__window{
+ 
+        height: 650px;
+    }
+    .about{
+
+        gap: 0;
+    }
+    .about__left,
+    .about__right{
+
+        width: 50%;
+    }
+    .contact{
+
+        gap: 100px; 
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .app{
+
+        font-size: 28px;
+    }
+    .home{
+        
+        background-size: 85%;
+    }
+    .prime_h2{
+
+        font-size: 70px;
+    }
+    .prime_btn{
+
+        font-size: 28px;
+        padding: 8px 30px;
+    }
     .nav{
 
         display: none;
@@ -55,277 +125,415 @@
 
         display: block;
     }
-    .promo{
+    .scroll__bar{
 
-      margin-left: 260px;
-      flex-direction: column;
-      height: 720px;
-    }
-
-    .promo__content{
-
-        border: 0;
-        border-bottom: 1px solid #F5F5F5;
-        margin: 0 0 190px 50px;
-    }
-    .promo__imgs{
-
-        position: absolute;
-        right: 220px;
-        top: 270px  ;
-        height: 700px;
-        gap: 150px;
-    }
-    .box{
-
-        height: 750px;
-    }
-    .with__woods{
-
-        width: 1090px;
-        justify-content: space-evenly;
-    }
-    .our{
-        width: 90%;
-    }
-    .about__left {
-        margin-left: 220px;
-    }
-}
-
-@media screen and (max-width: 1200px){
-
-    .home__wrapp, .gallery, .price, .aboutus, .contact{
-
-        max-width: 1080px;
+        display: block;
     }
     .promo{
-        
-      margin-left: 220px;
+
+        height: 600px;
+    }
+    .with_woods{
+
+        min-width: 1000px;
+        max-width: 1000px;
+        margin: 125px 0 200px 0;
     }
     .carousel__window{
-
-        height: 575px;
+ 
+        height: 550px;
     }
-    .with__woods{
-        width: 1090px;
-    }
-    .about{
+    .advantages>.prime_h2{
 
-        width: 100%;
-        right: 0;
-        padding: 50px;
+        width: auto;
+    }
+    .advantages__content{
+
         gap: 20px;
     }
-    .about__left{
-
-        margin: 0;
+    .advantages__content_video iframe{
+        width: 500px;
     }
-    .about__right{
-        width: auto;
+    .about__right>img:nth-child(2){
+
+        right: 90px;
     }
     .contact{
-        gap: 30px;
+
+        gap: 20px;
+    }
+    .footer{
+
+        background-position: 110% -100px;
     }
 }
+@media screen and (max-width: 975px){
 
-@media screen and (max-width: 1152px){
-
-    .home{
-
-        width: 1080px;
-    }
-}
-
-@media screen and (max-width: 1024px){
-
-    .home{
-        width: auto;
-    }
     .prime_h2{
 
-        margin-left: 5%;
-        font-size: 70px;
-    }
-    .home__wrapp, .gallery, .price, .aboutus, .contact{
+        margin: 0;
 
-        max-width: auto;
-        width: auto;
-        min-width: auto;
     }
     .promo{
+
+        flex-direction: column;
+        height: 650px;
+    }
+    .promo__content{
+
+        width: 95%;
+        border-right: 0;
+        border-bottom: 1px solid #F5F5F5;
+        gap: 40px;
+        padding-bottom: 80px;
+    }
+    .promo__content>.prime_h2{
+
+        font-size: 75px;
+    }
+    .promo__content span{
         
-        margin-left: 165px;
+        width: 50%;
     }
-    .promo__content {
+    .promo__content>.prime_btn{
 
-        width: 40%;
+        padding: 6px 60px;
     }
-    .promo__imgs {
+    .promo__images{
 
-        top: 300px;
+        width: auto;
+        justify-content: space-around;
+        min-height: 500px;
+        margin-top: -220px;
     }
-    .with{
+    .promo__images-left{
 
-        margin: 80px auto;
+        margin-bottom: 60px;
     }
-    .with__woods{
+    .promo__images-right{
 
-        width: 1090px;
+        margin: 0;
+        height: 130%;
     }
-    .our{
+    .with>.prime_h2{
 
-        width: 80%;
-    }
-    .carousel__window{
-
-        height: 475px;
+        margin-left: 7%;
     }
     .advantages__content{
 
         flex-direction: column-reverse;
-        width: 80%;
+        margin: 80px auto;
+        gap: 60px;
+    }
+    .advantages__content_video iframe{
+
+        width: 100%;
+        height: 480px;
     }
     .advantages__content_text{
 
         gap: 20px;
     }
-    .advantages__content_video iframe{
+    .advantages>.prime_btn{
 
-        width: 1000px;
-        height: 565px;
-        margin-left: -88px;
+        padding: 8px 75px;
     }
     .about{
 
         flex-direction: column;
-        right: 200px;
-        width: 800px;
         height: 1300px;
+        max-width: 80%;
+        gap: 100px;
+        border-radius: 0 100px 100px 0;
     }
-    .about__left{
+    .about__left, .about__right{
 
         width: auto;
-        margin-left: 200px;
-        margin: 80px 0 0 200px;
-    }
-    .about__left>.prime_h2{
-
-        margin-left: 0%;
     }
     .about__right{
 
-        gap: 380px;
+        height: 700px;
+        align-items: flex-start;
+        margin-left: 180px;
     }
     .about__right>img:nth-child(1){
-
-        margin-right: 250px;
+        margin-left: 120px;
     }
     .about__right>img:nth-child(2){
 
-        left: 300px;
-        top: 600px;
+        top: 610px;
+        left: 50px;
     }
-    .about__right>img:nth-child(3){
-        
-        margin-right: 300px;
+    .any{
+
+        margin: 200px 5% -82px 5%;
+    }
+    .any>.wrapper{
+
+        flex-direction: column-reverse;
+    }
+    .any__description{
+
+        width: 70%;
+        text-align: left;
+    }
+    .any__form{
+
+        width: 90%;
     }
     .any>.prime_h2{
 
         text-align: left;
-        margin-left: 5%;
     }
-    .any__wrapper{
+    .any__form .prime_btn{
 
-        gap: 30px;
-
+        padding: 19px 40px;
+        border-radius: 45px;
     }
-    .any__form{
+    .footer__infin>.wrapper{
 
-        width: 40%;
-        margin-left: 20px;
-    }
-    .contact{
-
+        position: relative;
+        height: 600px;
         flex-direction: column;
+        justify-content: flex-end;
         align-items: center;
+        gap: 40px;
     }
-    .contact__map iframe{
+    .footer__logo, .footer__phone, .footer__geo{
 
-        width: 1000px;
+        margin: 0;
+        width: 350px;
     }
-    .footer__logo{
+    .footer__phone, .footer__geo{
 
-        margin-left: 40px;
+        margin-left: 60px;
     }
+    .footer__logo img{
+
+        height: 130px;
+        margin: 0;
+
+    }
+    .footer__logo span{
+
+        position: absolute;
+        bottom: 20px;
+        left: 40%;
+    }
+    .footer__geo{
+
+        margin-bottom: 120px;
+    }
+
+    .contact{
+        margin: 0 5%;
+        padding-top: 190px;
+        flex-direction: column;
+    }
+
+    .contact__data>.prime_h2{
+
+        margin: 0;
+    }
+
+    .contact__data>.footer__phone, .contact__data>.footer__geo{
+
+        margin: 0 0 0 60px;
+    }
+    .contact__map{
+
+        margin: 0;
+        margin-top: 50px;
+    }
+    .contact__map>iframe{
+
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .promo__content span{
+
+        width: 70%;
+    }
+    .our{
+        margin: 200px 8%;
+    }
+    .carousel__window{
+
+        height: 425px;
+    }
+    .about{
+        max-width: 90%;
+    }
+
 }
 
 @media screen and (max-width: 768px){
 
-    .app{
+    .our{
 
-        font-size: 25px;
+        margin: 200px 5%;
     }
+}
+
+
+
+
+
+@media screen and (max-width: 640px){
+
     .home{
-        width: auto;
+
+        background-size: 90%;
     }
-    .prime_h2{
+    .prime_h2, .promo__content>.prime_h2{
 
         font-size: 60px;
     }
-    .promo__content{
 
-        margin: 50px 50px 80px 50px;
-    }
-    .promo__imgs{
+    .with>.prime_h2{
 
-        right: 300px;
-        top: 385px;
+        margin-left: 3%;
+        width: auto;
     }
-    .with__woods{
+    .promo__images{
 
-        width: 1080px;
+        margin-top: -180px;
     }
-    .scroll__bar{
+    .promo img{
 
-        display: block;
-    }
-    .our{
-        width: 75%;
+        width: 80%;
     }
     .carousel__window{
 
-        height: 395px;
+        height: 345px;
     }
-    .advantages__content{
+    .footer{
 
-        gap: 40px;
-        margin: 60px auto;
+        background-position: 92px -66px;
+    }
+}
+
+@media screen and (max-width: 425px){
+
+    .app{
+
+        font-size: 20px;
+    }
+    .home{
+        padding-top: 150px;
+    }
+    .prime_h2, .promo__content>.prime_h2{
+
+        font-size: 45px;
+    }
+    .prime_btn, .promo__content>.prime_btn, .advantages>.prime_btn, .any__form .prime_btn{
+
+        padding: 6px 30px;
+        font-size: 20px ;
+    }
+    .promo{
+
+        height: 450px;
+        padding: 40px 0 100px 30px;
+        margin: 0 0 250px auto;
+        border-radius: 25px 0 0 25px;
+    }
+    .promo__content{
+
+        gap: 25px;
+        padding: 0 0 40px 0;
+    }
+    .promo__images{
+
+        min-height: 290px;
+        margin-top: -110px  ;
+    }
+    .with, .our,.advantages, .about{
+
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    .with_woods{
+
+        margin: 80px 0 100px 0;
+    }
+    .carousel{
+        margin: 50px 5% 0 5%;
+    }
+    .carousel__window{
+
+        height: 225px;
     }
     .advantages__content_video iframe{
 
-        width: 750px;
-        height: 420px;
-        margin-left: -68px;
+        height: 230px;
+        border-radius: 25px;
     }
-    .any__wrapper{
+    .about{
 
-        gap: 0;
+        height: 1100px; 
+        gap: 30px;
     }
-    .any__form{
+    .about__left{
+        gap: 40px;
+    }
+    .about__right{
+
+        height: 390px;
+        margin-left: 70px;
+    }
+    .about__right img{
+        width: 120px;
+        border-radius: 15px;
+    }
+    .about__right>img:nth-child(2){
 
         width: 60%;
+        left: 20px;
+        top: 590px;
+    }
+    .about__right>img:nth-child(3){
+
+        padding: 0;
+    }
+    .any{
+
+        margin: 150px 5% -82px 5%;
+    }
+    .any>.wrapper{
+
+        gap: 25px;
     }
     .any__description{
 
-        width: 35%;
+        width: auto;
     }
-    .about__right>img:nth-child(1){
-
-        margin-right: 100px;
+    .any__form{
+        width: auto;
     }
-    .contact__map iframe{
+    .any__form>form{
 
-        width: 750px;
+        gap: 15px;
+    }
+    .any__form input, .any__form textarea{
+
+        border: 1px solid #728BAD;
+        font-size: 20px;
+        padding: 13px 20px;
+    }
+    .footer__infin>.wrapper{
+
+        height: 500px;
+    }
+    .footer__logo, .footer__phone, .footer__geo{
+
+        width: auto;
+    }
+    .footer__logo img{
+
+        height: 80px;
     }
 }
