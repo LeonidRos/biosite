@@ -46,7 +46,13 @@ font-family: 'KyivSans';
     font-weight: bold;
     color: #F5F5F5;
     border-radius: 30px;
+    transition: 0.2s;
     cursor: pointer;
+}
+
+.prime_btn:hover{
+
+    background-color: #4887df;
 }
 
 .app{
@@ -232,6 +238,18 @@ font-family: 'KyivSans';
 
     border-radius: 45px;
     display: flex;
+    transition: 0.3s;
+}
+
+.promo:hover{
+
+    box-shadow: 0 0 40px 0px rgb(124, 122, 122);
+}
+
+.promo:hover .prime_btn{
+
+    box-shadow: 0 0 40px 0px #444;
+
 }
 
 .promo__content{
@@ -459,9 +477,16 @@ font-family: 'KyivSans';
     
     border-radius: 45px;
 
+    transition: 0.5s;
+
     display: flex;
     position: relative;
     gap: 60px;
+}
+
+.about:hover{
+
+    box-shadow: 0 0 40px 0px rgb(124, 122, 122);
 }
 
 .about__left{
@@ -542,7 +567,16 @@ font-family: 'KyivSans';
     border-radius: 45px;
     font-size: 30px;
     color: #D9D9D9;
+
+    transition: 0.5s;
 }
+
+.any__form input:hover,
+.any__form textarea:hover{
+
+    box-shadow: 0 0 20px 0px #728BAD;
+    background-color: #728aad21;
+ }
 
 .any__form textarea{
 
@@ -626,6 +660,12 @@ font-family: 'KyivSans';
 
     background-color: #222021;
     box-shadow: 0 0 40px 0px rgb(121, 119, 119);
+    transition: 0.5s;
+}
+
+.footer__infin:hover{
+
+    box-shadow: 0 0 40px 0px rgb(173, 170, 170);
 }
 
 .footer__infin>.wrapper{
@@ -651,6 +691,13 @@ font-family: 'KyivSans';
     padding-top: 20px;
     width: 300px;
     position: relative;
+}
+
+.footer__phone a{
+
+    color:#F5F5F5;
+    text-transform: none;
+    text-decoration: none;
 }
 
 .footer__phone::after{

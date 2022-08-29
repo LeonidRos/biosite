@@ -51,9 +51,17 @@
     position: absolute;
     right: -80px;
     top: 50%;
+    border-radius: 30px;
 
     cursor: pointer;
     transition: 0.5s;
+}
+
+.carousel__btn:hover,
+.carousel__btn_v:hover{
+
+    box-shadow: 0 0 20px 0px #bbaeae;
+    background-color: #bbaeae67;
 }
 
 .carousel__btn-left,

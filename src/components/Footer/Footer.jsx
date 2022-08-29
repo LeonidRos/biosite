@@ -12,7 +12,7 @@ function Footer() {
 
 				</div>
 
-				<div className="footer__phone">+420 000 000 000</div>
+				<div className="footer__phone"><a href="tel:+420 000 000 000">+420 000 000 000</a></div>
 				<div className="footer__geo">Na Plzeňce 1166/0150 00</div>
 			</div>
         </div>

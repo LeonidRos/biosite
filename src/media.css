@@ -537,3 +537,45 @@
         height: 80px;
     }
 }
+@media screen and (max-width: 375px){
+
+    .prime_h2, .promo__content>.prime_h2{
+
+        font-size: 38px;
+    }
+    .promo__content{
+
+        border: 0;
+    }
+    .carousel__window {
+        height: 200px;
+    }
+    .footer{
+
+        background-position: -104px 10px;
+    }
+    .footer__geo::after{
+
+        top: -1px;
+    }
+}
+@media screen and (max-width: 320px){
+
+    .promo__images{
+
+        min-height: 250px;
+    }
+    .about__right{
+
+        margin-left: 0;
+    }
+    .about__right>img:nth-child(2){
+
+        top: 800px;
+        border-radius: 45px;
+
+    }
+
+
+
+}
