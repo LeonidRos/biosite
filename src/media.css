@@ -134,9 +134,7 @@
         height: 600px;
     }
     .with_woods{
-
-        min-width: 1000px;
-        max-width: 1000px;
+        
         margin: 125px 0 200px 0;
     }
     .carousel__window{
@@ -214,6 +212,11 @@
 
         margin: 0;
         height: 130%;
+    }
+    .with_woods{
+
+        min-width: 1200px;
+        max-width: 1200px;
     }
     .with>.prime_h2{
 
@@ -523,6 +526,11 @@
         border: 1px solid #728BAD;
         font-size: 20px;
         padding: 13px 20px;
+        border-radius: 30px;
+    }
+    .error__img{
+
+        margin: 0 auto;
     }
     .footer__infin>.wrapper{
 
@@ -549,6 +557,11 @@
     }
     .carousel__window {
         height: 200px;
+    }
+
+    .error__description>a{
+
+        padding: 5px 30px;
     }
     .footer{
 

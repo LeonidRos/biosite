@@ -23,6 +23,41 @@ export const Carousel = ({children}) => {
         setSlide(elem.target.dataset.id * -100)
     }
 
+
+    let stX = 0,
+        nowX = 0;
+
+    function swipe(x){
+
+        if(x > 0)left();
+        if(x < 0)right();
+    }
+        
+    function TouchStart(e){
+
+        stX = e.changedTouches[0].screenX
+    }
+
+    function MouseStart(e){
+
+        e.preventDefault();
+        stX = e.clientX;
+    }
+
+    function TouchEnd(e){
+
+        nowX = e.changedTouches[0].screenX - stX;
+        swipe(nowX);
+    }
+
+    function MouseEnd(e){
+
+        nowX = e.clientX - stX;
+        swipe(nowX);
+    }
+
+
+
     function circles(){
         return(
             children.map(elem =>{
@@ -40,7 +75,12 @@ export const Carousel = ({children}) => {
         <div className="carousel">
             <div className="carousel__window">
                 <div className="carousel__all"
-                style={{transform: `translateX(${slide}%)`}}>
+                    style={{transform: `translateX(${slide}%)`}}
+                    onTouchStart={TouchStart}
+                    onTouchEnd={TouchEnd}
+                    onMouseDown={MouseStart}
+                    onMouseUp={MouseEnd}
+                >
                     {children}
                 </div>
             </div>

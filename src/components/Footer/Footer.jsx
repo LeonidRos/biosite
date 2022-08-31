@@ -1,8 +1,19 @@
+import { useState } from 'react';
+
 import logo from '../../img/logo.png';
 
-function Footer() {
+function Footer(props) {
+
+	const [footerHide, setFooterHide] = useState('footer');
+
+	window.document.addEventListener('mouseout', ()=>{
+
+		if(window.document.querySelector('.error'))setFooterHide('hide')
+		else setFooterHide('footer');
+	});
+
 	return (
-	<footer className='footer'>
+	<footer className={footerHide}>
 		<div className='footer__infin'>
 			<div className="wrapper">
 				<div className="footer__logo">

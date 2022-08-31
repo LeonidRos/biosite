@@ -7,7 +7,8 @@ import Footer from "./components/Footer/Footer";
 import './style.css';
 import './media.css';
 
-function App() {
+function App(){
+
 	return (
 		<div className="app">
 			<Router>

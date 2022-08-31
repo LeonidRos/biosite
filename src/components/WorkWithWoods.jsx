@@ -7,19 +7,39 @@ function WorkWithWoods() {
 
     const swipe = useRef(null);
     const [swipePosition, setSwipePosition] = useState(0);
-    const [nowX, setNowX] = useState(0);
 
-    function touchStart(e){
+    let stX = 0,
+        nowX = 0;
 
-        setNowX(e.touches[0].clientX);
+    function swipeX(x){
+        console.log(window.screen.width)
+        if(window.screen.width > 975)return;
+        if(x > 0 && swipePosition < 0 )setSwipePosition(swipePosition + 120);
+        if(x < 0 && swipePosition > -240)setSwipePosition(swipePosition - 120);
+
+    }
+        
+    function TouchStart(e){
+
+        stX = e.changedTouches[0].screenX
     }
 
-    function touchMove(e){
+    function MouseStart(e){
 
-        if(swipe.current.clientWidth > 1080)return;
-        if(e.targetTouches[0].clientX - nowX > 10 || e.targetTouches[0].clientX - nowX < -250)return;
+        e.preventDefault();
+        stX = e.clientX;
+    }
 
-        setSwipePosition(e.targetTouches[0].clientX - nowX);
+    function TouchEnd(e){
+
+        nowX = e.changedTouches[0].screenX - stX;
+        swipeX(nowX);
+    }
+
+    function MouseEnd(e){
+
+        nowX = e.clientX - stX;
+        swipeX(nowX);
     }
 
     const transform = {
@@ -28,7 +48,7 @@ function WorkWithWoods() {
     }
 
     const transformScroll = {
-        transform: `translateX(${-swipePosition}px)`,
+        transform: `translateX(${-swipePosition*5}%)`,
     }
 
 	return (
@@ -36,9 +56,9 @@ function WorkWithWoods() {
 
        <h2 className="prime_h2">The wood we work with</h2>
 
-       <div className="with_woods" ref={swipe} onTouchMove={touchMove} onTouchStart={touchStart}>
+       <div className="with_woods" ref={swipe} onTouchStart={TouchStart} onTouchEnd={TouchEnd} onMouseDown={MouseStart} onMouseUp={MouseEnd}>
 
-            <div style={transform} className="with_woods__item" onTouchMove={touchMove} onTouchStart={touchStart}>
+            <div className="with_woods__item" style={transform} >
                 <img src={homeImg1} alt="#" />
                 <h3>Oak</h3>
 
@@ -51,7 +71,7 @@ function WorkWithWoods() {
 
             </div>
 
-            <div style={transform} className="with_woods__item" onTouchMove={touchMove} onTouchStart={touchStart}>
+            <div className="with_woods__item" style={transform}>
                 <img src={homeImg2} alt="#" />
                 <h3>Buk</h3>
                 
@@ -62,7 +82,7 @@ function WorkWithWoods() {
 
             </div>
 
-            <div style={transform} className="with_woods__item" onTouchMove={touchMove} onTouchStart={touchStart}>
+            <div className="with_woods__item" style={transform}>
                 <img src={homeImg3} alt="#" />
                 <h3>Ash</h3>
                 

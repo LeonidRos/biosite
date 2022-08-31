@@ -6,23 +6,64 @@ import './Cadrousel.css';
 export const CarouselVertical = ({children}) => {
 
     const [slide, setSlide] = useState(0);
+    const [heightV, setHeigthV] = useState(0);
+    const vert = useRef();
+    let heightTmp = 0;
+
+    window.addEventListener('mouseout', ()=> {
+
+        heightTmp = vert.current.offsetWidth;
+    });
+
     let key = -1;
 
     function right(){
-        if(slide !== (children.length - 1) * -800){
-            setSlide(slide - 800);
-        }
+        setHeigthV(heightTmp)
+            setSlide(slide - heightV);
+            console.log(heightV)
     };
 
     function left(){
-        if(slide !== 0){
-            setSlide(slide + 800);
-        }
+
+            setSlide(slide + heightV);
     };
 
     function setCircle(elem){
-        setSlide(elem.target.dataset.id * -800)
+        setSlide(elem.target.dataset.id * - heightV)
     }
+    
+    let stX = 0,
+        nowX = 0;
+
+    function swipe(x){
+
+        if(x > 0)left();
+        if(x < 0)right();
+    }
+        
+    function TouchStart(e){
+
+        stX = e.changedTouches[0].screenX;
+    }
+
+    function MouseStart(e){
+
+        e.preventDefault();
+        stX = e.clientX;
+    }
+
+    function TouchEnd(e){
+
+        nowX = e.changedTouches[0].screenX - stX;
+        swipe(nowX);
+    }
+
+    function MouseEnd(e){
+
+        nowX = e.clientX - stX;
+        swipe(nowX);
+    }
+
 
     function circles(){
         return(
@@ -30,19 +71,22 @@ export const CarouselVertical = ({children}) => {
                 key++;
 
                 return (
-                    <div key={key} data-id={key} className={`carousel__circles_item${slide / 800 === -key ? "-active" : ""}`} onClick={setCircle}></div>
+                    <div key={key} data-id={key} className={`carousel__circles_item${slide / heightV === -key ? "-active" : ""}`} onClick={setCircle}></div>
                 );
             })
         )
     };
     
-
     return(
 
         <div className="carousel">
-            <div className="carousel__window_v">
+            <div className="carousel__window" ref={vert}>
                 <div className="carousel__all_v"
-                style={{transform: `translateY(${slide}px)`}}>
+                style={{transform: `translateY(${slide}px)`}}
+                onTouchStart={TouchStart}
+                onTouchEnd={TouchEnd}
+                onMouseDown={MouseStart}
+                onMouseUp={MouseEnd}>
                     {children}
                 </div>
             </div>

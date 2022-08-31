@@ -6,12 +6,14 @@ import Contact from './Contact';
 import About from './About';
 import Gallery from './Gallery';
 import Price from './Price';
+import Error404 from './Error404';
 
 export const MainContext = createContext();
 
 function Main() {
-	const [library, setLibrary] = useState([]);
 
+	const [library, setLibrary] = useState([]);
+	
 	return (
 		<main className="main">
 			<MainContext.Provider value={ {library, setLibrary} }>
@@ -21,6 +23,7 @@ function Main() {
 					<Route path="/price" element={<Price />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
+					<Route path="*" element={<Error404 />} />
 				</Routes>
 			</MainContext.Provider>
 		</main>

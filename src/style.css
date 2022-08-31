@@ -405,6 +405,7 @@ font-family: 'KyivSans';
     border-radius: 6px;
     position: absolute;
     top: 3px;
+    transition: 1.2s;
 }
 
 
@@ -639,7 +640,48 @@ font-family: 'KyivSans';
     border-radius: 45px;
 }
 
+.error{
 
+    padding-bottom: 100px;
+}
+
+.error__img{
+
+    width: 85%;
+    margin: -80px auto 0 auto;
+
+}
+
+.error__img img{
+
+    width: 100%;
+}
+.error__description{
+
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.error__description>.prime_h2{
+
+    margin: 0;
+}
+
+.error__description>span{
+
+    color: #FFDBBB;
+}
+
+.error__description>a{
+
+    width: fit-content;
+    text-decoration: none;
+    align-self: center;
+    padding: 8px 70px;
+}
 /*FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER----FOOTER*/
 .footer{
 
