@@ -25,6 +25,7 @@ font-family: 'KyivSans';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .prime_h2{
@@ -55,6 +56,57 @@ font-family: 'KyivSans';
     background-color: #4887df;
 }
 
+@keyframes up-key {
+    from {
+        right: -1px;
+        bottom: -1px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid rgb(238, 117, 18);
+    }
+  
+    to {
+        right: -18px;
+        bottom: -18px;
+        width: 80px;
+        height: 80px;
+        border: 2px solid rgba(228, 122, 35, 0);
+    }
+  }
+  
+.btn-up{
+
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 25px;
+    
+    background-color: #1e0c06cc;
+    cursor: pointer;
+    z-index: 666;
+}
+
+.btn-up::after{
+
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    animation: up-key 2s ease-in-out 0s infinite;
+}
+
+.btn-up::before{
+
+    content: "\1431";
+    position: absolute;
+    left: 14px;
+    color:rgb(228, 122, 35);
+
+    font-size: 30px;
+}
+
 .app{
 
     margin: 0 auto;
@@ -64,6 +116,33 @@ font-family: 'KyivSans';
     font-family: 'Inter', sans-serif;
     font-size: 30px;
     line-height: 44px;
+}
+.app span::selection,
+.app p::selection,
+.app div::selection,
+.app input::selection,
+.app textarea::selection,
+.app ul::selection,
+.app li::selection,
+.app a::selection,
+.app img::selection,
+.app h2::selection,
+.app h3::selection,
+.app button::selection,
+.app h2::selection
+{
+
+    background: rgb(228, 122, 35);
+}
+
+.app span::-moz-selection,
+.app p::-moz-selection,
+.app div::-moz-selection,
+.app input::-moz-selection,
+.app textarea::-moz-selection,
+.app h2::-moz-selection{
+
+    background: rgb(228, 122, 35);
 }
 
 .wrapper{
@@ -324,12 +403,15 @@ font-family: 'KyivSans';
 
     margin: 125px 5% 200px 5%;
     position: relative;
+}
+
+.with__slide{
 
     display: flex;
     justify-content: space-between;
 }
 
-.with>.prime_h2{
+.with .prime_h2{
 
     width: 700px;
     display: block;
@@ -389,11 +471,12 @@ font-family: 'KyivSans';
 
     display: none;
     height: 12px;
-    width: 100%;
     background-color: #32353C;
     position: absolute;
     bottom: -30px;
     overflow: hidden;
+    left: 10px;
+    border-radius: 6px;
 
 }
 

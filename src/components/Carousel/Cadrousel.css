@@ -8,9 +8,13 @@
 .carousel__window_v{
 
     width: 100%;
-    height: 800px;
     overflow: hidden;
     border-radius: 50px;
+}
+
+.carousel__window_v{
+
+    height: 50vh;
 }
 
 .carousel__all,

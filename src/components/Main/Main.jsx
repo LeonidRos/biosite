@@ -26,6 +26,8 @@ function Main() {
 					<Route path="*" element={<Error404 />} />
 				</Routes>
 			</MainContext.Provider>
+
+			<a className="btn-up" href="#head"></a>
 		</main>
 	);
 }

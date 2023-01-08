@@ -5,37 +5,37 @@ import './Cadrousel.css';
 export const Carousel = ({children}) => {
 
     const [slide, setSlide] = useState(0);
-    let key = -1;
 
-    function right(){
+    let key = -1,
+        stX = 0,
+        nowX = 0;
+
+
+    function Right(){
         if(slide !== (children.length - 1) * -100){
             setSlide(slide - 100);
         }
     };
 
-    function left(){
+    function Left(){
         if(slide !== 0){
             setSlide(slide + 100);
         }
     };
 
     function setCircle(elem){
-        setSlide(elem.target.dataset.id * -100)
+        setSlide(elem.target.dataset.id * -100);
     }
 
+    function Swipe(x){
 
-    let stX = 0,
-        nowX = 0;
-
-    function swipe(x){
-
-        if(x > 0)left();
-        if(x < 0)right();
+        if(x > 0)Left();
+        if(x < 0)Right();
     }
         
     function TouchStart(e){
 
-        stX = e.changedTouches[0].screenX
+        stX = e.changedTouches[0].screenX;
     }
 
     function MouseStart(e){
@@ -47,16 +47,14 @@ export const Carousel = ({children}) => {
     function TouchEnd(e){
 
         nowX = e.changedTouches[0].screenX - stX;
-        swipe(nowX);
+        Swipe(nowX);
     }
 
     function MouseEnd(e){
 
         nowX = e.clientX - stX;
-        swipe(nowX);
+        Swipe(nowX);
     }
-
-
 
     function circles(){
         return(
@@ -64,7 +62,10 @@ export const Carousel = ({children}) => {
                 key++;
 
                 return (
-                    <div key={key} data-id={key} className={`carousel__circles_item${slide / 100 === -key ? "-active" : ""}`} onClick={setCircle}></div>
+                    <div key={key} 
+                        data-id={key} 
+                        className={`carousel__circles_item${slide / 100 === -key ? "-active" : ""}`} 
+                        onClick={setCircle}></div>
                 );
             })
         )
@@ -85,8 +86,8 @@ export const Carousel = ({children}) => {
                 </div>
             </div>
 
-            <button className="carousel__btn" onClick={right}></button>
-            <button className="carousel__btn carousel__btn-left" onClick={left}></button>
+            <button className="carousel__btn" onClick={Right}></button>
+            <button className="carousel__btn carousel__btn-left" onClick={Left}></button>
 
             <div className="carousel__circles">{circles()}</div>
         </div>

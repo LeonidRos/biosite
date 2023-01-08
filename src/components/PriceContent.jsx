@@ -28,14 +28,6 @@ function PriceContent(){
                     <img src={priceImg4} alt="#" />
                 </div>
 
-
-                
-                <div className="item"></div>
-                <div className="item"></div>
-                <div className="item"></div>
-                <div className="item"></div>
-                <div className="item"></div>
-
             </CarouselVertical>
         </div>
     );

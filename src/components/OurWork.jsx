@@ -1,4 +1,3 @@
-
 import sliderSrc from '../img/slider.png';
 import {Carousel} from './Carousel/Carousel';
 

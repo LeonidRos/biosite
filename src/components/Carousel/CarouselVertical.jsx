@@ -1,6 +1,5 @@
 
-import { useRef } from "react";
-import { useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import './Cadrousel.css';
 
 export const CarouselVertical = ({children}) => {
@@ -8,37 +7,31 @@ export const CarouselVertical = ({children}) => {
     const [slide, setSlide] = useState(0);
     const [heightV, setHeigthV] = useState(0);
     const vert = useRef();
-    let heightTmp = 0;
 
-    window.addEventListener('mouseout', ()=> {
-
-        heightTmp = vert.current.offsetWidth;
-    });
-
-    let key = -1;
-
-    function right(){
-        setHeigthV(heightTmp)
-            setSlide(slide - heightV);
-            console.log(heightV)
-    };
-
-    function left(){
-
-            setSlide(slide + heightV);
-    };
-
-    function setCircle(elem){
-        setSlide(elem.target.dataset.id * - heightV)
-    }
-    
     let stX = 0,
         nowX = 0;
 
+    function Down(){
+
+        if(slide <= -vert.current.children[0].offsetHeight + heightV)return;
+        setSlide(slide - heightV);
+    };
+
+    function Up(){
+
+        if(slide >= 0)return;
+        setSlide(slide + heightV);
+    };
+
+    function setCircle(elem){
+        
+        setSlide(elem.target.dataset.id * -heightV)
+    }
+
     function swipe(x){
 
-        if(x > 0)left();
-        if(x < 0)right();
+        if(x > 0)Up();
+        if(x < 0)Down();
     }
         
     function TouchStart(e){
@@ -49,7 +42,7 @@ export const CarouselVertical = ({children}) => {
     function MouseStart(e){
 
         e.preventDefault();
-        stX = e.clientX;
+        stX = e.clientY;
     }
 
     function TouchEnd(e){
@@ -60,18 +53,37 @@ export const CarouselVertical = ({children}) => {
 
     function MouseEnd(e){
 
-        nowX = e.clientX - stX;
+        nowX = e.clientY - stX;
         swipe(nowX);
     }
 
+    useEffect(()=>{
+
+        if(!vert)return;
+        if(heightV === 0)setHeigthV(vert.current.offsetHeight)
+
+    },[heightV])
 
     function circles(){
-        return(
-            children.map(elem =>{
-                key++;
 
+        if(vert.current === undefined)return;
+        let arrForMap = [],
+            tmp = Math.round(vert.current.children[0].offsetHeight / heightV);
+
+        for(let i = 0; tmp > i; i++){
+            arrForMap.push(i)
+        }
+
+        return(
+            
+            arrForMap.map(elem =>{
+                
                 return (
-                    <div key={key} data-id={key} className={`carousel__circles_item${slide / heightV === -key ? "-active" : ""}`} onClick={setCircle}></div>
+                    <div key={elem} 
+                        data-id={elem} 
+                        className={`carousel__circles_item${slide / heightV === -elem ? "-active" : ""}`} 
+                        onClick={setCircle}>
+                    </div>
                 );
             })
         )
@@ -80,7 +92,7 @@ export const CarouselVertical = ({children}) => {
     return(
 
         <div className="carousel">
-            <div className="carousel__window" ref={vert}>
+            <div className="carousel__window_v" ref={vert}>
                 <div className="carousel__all_v"
                 style={{transform: `translateY(${slide}px)`}}
                 onTouchStart={TouchStart}
@@ -91,8 +103,8 @@ export const CarouselVertical = ({children}) => {
                 </div>
             </div>
 
-            <button className="carousel__btn_v" onClick={right}></button>
-            <button className="carousel__btn_v carousel__btn-left_v" onClick={left}></button>
+            <button className="carousel__btn_v" onClick={Down}></button>
+            <button className="carousel__btn_v carousel__btn-left_v" onClick={Up}></button>
 
             <div className="carousel__circles">{circles()}</div>
         </div>

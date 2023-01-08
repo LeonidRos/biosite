@@ -14,13 +14,11 @@ function Header() {
 	const burgerOpen = useRef(null);
 	const location = useLocation();
 
-	
 
 	useEffect(()=>{
 
 		if(linkLib.find(i => i === location.pathname))setCss(style2)
 		else setCss(style);
-
 	});
 
 	function show(e){
@@ -37,10 +35,8 @@ function Header() {
 
 	return (
 
-		<header className={css.block}>
-
+		<header className={css.block} id="head">
 			<div className={css.wrapper}>
-
 				<div className={css.logo}>
 
 						<Link to="/"><img src={logo} alt="#" /></Link>

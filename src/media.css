@@ -23,10 +23,6 @@
 
         font-size: 80px;
     }
-    .carousel__window{
-
-        height: 740px;
-    }
     .about{
 
         padding-left: 6%;
@@ -49,10 +45,6 @@
 
         width: 50%;
         padding-left: 30px;
-    }
-    .carousel__window{
-
-        height: 695px;
     }
     .about{
 
@@ -78,10 +70,6 @@
     .promo__content>.prime_h2{
 
         font-size: 65px;
-    }
-    .carousel__window{
- 
-        height: 650px;
     }
     .about{
 
@@ -125,21 +113,14 @@
 
         display: block;
     }
-    .scroll__bar{
 
-        display: block;
-    }
     .promo{
 
         height: 600px;
     }
-    .with_woods{
-        
-        margin: 125px 0 200px 0;
-    }
-    .carousel__window{
- 
-        height: 550px;
+    .with .prime_h2{
+
+        margin-left: 7%;
     }
     .advantages>.prime_h2{
 
@@ -212,15 +193,6 @@
 
         margin: 0;
         height: 130%;
-    }
-    .with_woods{
-
-        min-width: 1200px;
-        max-width: 1200px;
-    }
-    .with>.prime_h2{
-
-        margin-left: 7%;
     }
     .advantages__content{
 
@@ -327,18 +299,15 @@
 
         margin-bottom: 120px;
     }
-
     .contact{
         margin: 0 5%;
         padding-top: 190px;
         flex-direction: column;
     }
-
     .contact__data>.prime_h2{
 
         margin: 0;
     }
-
     .contact__data>.footer__phone, .contact__data>.footer__geo{
 
         margin: 0 0 0 60px;
@@ -360,12 +329,17 @@
 
         width: 70%;
     }
+    .with_woods{
+
+        max-width: 900px;
+        min-width: 900px;
+    }
+    .scroll__bar{
+
+        display: block;
+    }
     .our{
         margin: 200px 8%;
-    }
-    .carousel__window{
-
-        height: 425px;
     }
     .about{
         max-width: 90%;
@@ -377,13 +351,16 @@
 
     .our{
 
-        margin: 200px 5%;
+        margin: 200px 0;
+    }
+    .carousel__btn_v{
+        display: none;
+    }
+    .carousel{
+
+        margin: 0;
     }
 }
-
-
-
-
 
 @media screen and (max-width: 640px){
 
@@ -408,10 +385,6 @@
     .promo img{
 
         width: 80%;
-    }
-    .carousel__window{
-
-        height: 345px;
     }
     .footer{
 
@@ -464,11 +437,7 @@
         margin: 80px 0 100px 0;
     }
     .carousel{
-        margin: 50px 5% 0 5%;
-    }
-    .carousel__window{
-
-        height: 225px;
+        margin: 50px 0 0 0;
     }
     .advantages__content_video iframe{
 
@@ -555,10 +524,6 @@
 
         border: 0;
     }
-    .carousel__window {
-        height: 200px;
-    }
-
     .error__description>a{
 
         padding: 5px 30px;
@@ -588,7 +553,4 @@
         border-radius: 45px;
 
     }
-
-
-
 }

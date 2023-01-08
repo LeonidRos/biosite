@@ -1,4 +1,6 @@
+
 function Advantages(){
+
     return(
         <section className="advantages">
             <h2 className="prime_h2">Advantages working with us</h2>
@@ -17,7 +19,7 @@ function Advantages(){
 
             </div>
 
-            <a className="prime_btn" href="aegjaejrgaer">Receive a consultation</a>
+            <a className="prime_btn" href="#any">Receive a consultation</a>
         </section>
     );
 }
